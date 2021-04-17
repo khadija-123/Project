@@ -213,24 +213,54 @@ public class LoginPage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Object x=jComboBox1.getSelectedItem();
+        LoginMains c= new CommitteeMmbr();
+        LoginMains a= new Advisors();
+        LoginMains s= new Students();
+        String mail=jTextField1.getText();
+        String pass=jTextField1.getText();
         if (x=="None")
         {
             JOptionPane.showMessageDialog(this, "Kindly fill the Account Type");
         }
         if (x=="Committee Member")
         {
-            Committee com=new Committee();
-            com.setVisible(true);
+            if (mail==c.email && pass==c.pass)
+            {
+                Committee com=new Committee();
+                com.setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Wrong Email Or Password For Committee");
+
+            }
+            
         }
         if (x=="Advisory Board")
         {
-            Advisor fr=new Advisor();
-            fr.setVisible(true);
+            if (mail==a.email && pass==a.pass)
+            {
+                Advisor fr=new Advisor();
+                fr.setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Wrong Email Or Password For Advidor");
+
+            }
         }
         if (x=="Student")
         {
-            Student fro=new Student();
-            fro.setVisible(true);
+            if (mail==s.email && pass==s.pass)
+            {
+                Student fro=new Student();
+                fro.setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Wrong Email Or Password For Student");
+
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

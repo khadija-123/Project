@@ -138,7 +138,7 @@ public class Students {
         String session="";
         for (int i=0;i<4;i++)
         {
-            char arr=session.charAt(i);
+            char arr=regNo.charAt(i);
             session=session+arr;
         }
         this.session=session;
