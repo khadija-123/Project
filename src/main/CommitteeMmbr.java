@@ -76,16 +76,15 @@ public class CommitteeMmbr extends LoginMains{
            return true;
        }
     }
-    /*public void saveData(Students s) throws IOException{
+    public void saveData(Students s) throws IOException{
     Writer writer = null;
     
     try
     {
-    String text = "This is a text file";
     
     File file = new File("Students.pdf");
     writer = new BufferedWriter(new FileWriter(file));
-    writer.write(text);
+    writer.write("PDF Created");
     } catch (FileNotFoundException e)
     {
     } catch (IOException e)
@@ -97,10 +96,7 @@ public class CommitteeMmbr extends LoginMains{
     writer.close();
     }
     }
-    }*/
-        LoginMains c= new CommitteeMmbr();
-        LoginMains a= new Advisors();
-        LoginMains s= new Students();
+    }
         public void loadData(LoginMains l)
         {
         try {
@@ -111,11 +107,10 @@ public class CommitteeMmbr extends LoginMains{
           line = br.readLine();
           while(line != null)
           {
-               c=new CommitteeMmbr();
+               l=new CommitteeMmbr();
                String[] toks = line.split(",");
-               c.setEmail(toks[0]);
-               c.setPass(toks[1]);               
-               
+               l.setEmail(toks[0]);
+               l.setPass(toks[1]);               
           }
         
             br.close();

@@ -9,7 +9,7 @@ package main;
  *
  * @author Umar
  */
-public class Advisors {
+public class Advisors extends LoginMains{
      public String getName() {
         return name;
     }

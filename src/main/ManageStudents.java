@@ -220,13 +220,15 @@ public class ManageStudents extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(this,"Student added");
             c.addStudent(s);
-            /*try {
-            c.saveData(s);
+            
+            try {
+                c.saveData(s);
             } catch (IOException ex) {
-            Logger.getLogger(ManageStudents.class.getName()).log(Level.SEVERE, null, ex);*/
+                Logger.getLogger(ManageStudents.class.getName()).log(Level.SEVERE, null, ex);
             }
+            
         
-        
+        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
